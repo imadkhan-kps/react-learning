@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Greeting from './features/Greeting'
-import FruitList from './features/FruitList'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Greeting from "./features/Greeting";
+import FruitList from "./features/FruitList";
 
 function App() {
-  const [count, setCount] = useState<number>(0)
-  const [name, setName] = useState<string>('Muhammad');
+  const [count, setCount] = useState<number>(0);
+  const [name, setName] = useState<string>("Muhammad");
   const [isToggled, setIsToggled] = useState<boolean>(true);
 
   return (
@@ -28,11 +28,9 @@ function App() {
         <button onClick={() => setCount((count) => count - 1)}>
           decrease count is {count}
         </button>
-        <button onClick={() => setCount(0)}>
-          reset count is {count}
-        </button>
+        <button onClick={() => setCount(0)}>reset count is {count}</button>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '50px'}}>
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
         <Greeting name={name} />
         <input
           type="text"
@@ -41,14 +39,16 @@ function App() {
           placeholder="Enter your name"
         />
       </div>
-      <button onClick={() => setIsToggled(!isToggled)}>{isToggled ? "Hide Fruits" : "Show Fruits"}</button>
+      <button onClick={() => setIsToggled(!isToggled)}>
+        {isToggled ? "Hide Fruits" : "Show Fruits"}
+      </button>
       <FruitList isShow={isToggled} />
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
