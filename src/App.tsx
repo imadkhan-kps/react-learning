@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Greeting from "./features/Greeting";
 import FruitList from "./features/FruitList";
+import LoginForm from "./features/LoginForm";
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -39,10 +40,15 @@ function App() {
           placeholder="Enter your name"
         />
       </div>
-      <button onClick={() => setIsToggled(!isToggled)}>
-        {isToggled ? "Hide Fruits" : "Show Fruits"}
-      </button>
-      <FruitList isShow={isToggled} />
+      <div>
+        <button onClick={() => setIsToggled(!isToggled)}>
+          {isToggled ? "Hide Fruits" : "Show Fruits"}
+        </button>
+        <FruitList isShow={isToggled} />
+      </div>
+      <div>
+        <LoginForm />
+      </div>
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
