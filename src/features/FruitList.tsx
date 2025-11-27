@@ -7,8 +7,8 @@ const FruitList: React.FC<{ isShow: boolean }> = ({ isShow }) => {
     <div>
       {isShow ? (
         <ul>
-          {fruits.map((fruit, index) => (
-            <li key={index}>{fruit}</li>
+          {fruits.map((fruit) => (
+            <li key={fruit}>{fruit}</li>
           ))}
         </ul>
       ) : null}
